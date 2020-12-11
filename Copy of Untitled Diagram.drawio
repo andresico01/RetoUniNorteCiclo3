@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-11T02:39:00.673Z" agent="5.0 (Windows)" etag="Ba2QbEd3NnEupkXrtWBl" version="14.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-11T03:29:39.681Z" agent="5.0 (Windows)" etag="L77Tl5hV5d1dNMhGMOd1" version="14.0.1" type="github">
   <diagram name="Page-1" id="03018318-947c-dd8e-b7a3-06fadd420f32">
     <mxGraphModel dx="1447" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -27,9 +27,6 @@
             <mxPoint x="60" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F0CbB1kp5sL9p8T1bUaQ-11" value="POST 2" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=14;fontColor=#000000;comic=1;" parent="F0CbB1kp5sL9p8T1bUaQ-2" vertex="1">
-          <mxGeometry x="149.9988235294118" y="605.2269601100412" width="302.6470588235295" height="165.06189821182943" as="geometry" />
-        </mxCell>
         <mxCell id="677b7b8949515195-16" value="POST 1" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=14;fontColor=#000000;comic=1;" parent="F0CbB1kp5sL9p8T1bUaQ-2" vertex="1">
           <mxGeometry x="149.9988235294118" y="143.05364511691883" width="302.6470588235295" height="165.06189821182943" as="geometry" />
         </mxCell>
@@ -47,12 +44,6 @@
         </mxCell>
         <mxCell id="F0CbB1kp5sL9p8T1bUaQ-44" value="Cerrar Sesion" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;whiteSpace=wrap;sketch=0;strokeColor=#666666;fontColor=#333333;fillColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="859" y="25" width="181" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="voHVwSBIgJdOrN0lmfMs-1" value="post nuevo" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;whiteSpace=wrap;sketch=0;strokeColor=#333333;fontColor=#333333;fillColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="660" y="135" width="181" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="voHVwSBIgJdOrN0lmfMs-2" value="eliminar post" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;whiteSpace=wrap;sketch=0;strokeColor=#333333;fontColor=#333333;fillColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="420" y="135" width="181" height="30" as="geometry" />
         </mxCell>
         <mxCell id="voHVwSBIgJdOrN0lmfMs-8" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;recursiveResize=0;fontSize=39;fontColor=#333333;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="113" y="121.5" width="330" height="67" as="geometry" />
