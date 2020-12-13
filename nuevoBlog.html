@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <title>nuevoBlog</title>
+    
+    </head>
+<body>
+    <header>
+        <div id="encabezado">
+             <div id="logo">
+                 <img src="logo_blog++.JPG" alt="logo_blog" width="27%">
+             
+             <div id="menu">
+                 Buscar Blogs:
+                 <input type="text" placeholder="Escriba palabras clave" autofocus required>
+                 <input id="boton" type="button" name="Buscar" value="Buscar Blogs">
+                 <a href=""><input id="boton" type="button" name="Cerrar Sesion" value="Cerrar Sesion" ></a>
+             </div>
+            </div>            
+        </div>
+    </header>
+    <hr>
+    <div id="Segundomenu">
+        <div id="checkbox">
+            <input type="checkbox" name="Blog Publico" id="Blog Publico">Blog Publico
+            <br>
+            <input type="checkbox" name="Blog Privado" id="Blog Privado">Blog Privado 
+        </div>
+        <div id="submenu"><input id="boton" type="button" name="Guardar Cambios" value="Guardar Cambios" ></div>
+    </div>
+    <br>
+    <section id=nuevoPost>
+        <article>
+            <h2>Titulo del post</h2>
+            <img src="postnuevo.jpg" alt="imagen post nuevo">
+            <input type="file" name="imagenPost" id="imagenPost">
+            <br>
+            <textarea name="textoPost" id="TextoPost" cols="50" rows="30">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam exercitationem delectus odio esse quos. Repellat libero odio pariatur explicabo neque architecto accusantium, perspiciatis itaque expedita, ipsum est vel voluptatem nam!</textarea>
+         </article>
+    </section>
+
+</body>
+</html>
