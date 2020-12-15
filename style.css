@@ -4,16 +4,16 @@
 }
 
 body{
-   background: rebeccapurple;
+   background: gray;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
 header{
     background-color: black;
     width: 100%;
     height: 100px;
-    box-shadow: 0px 0px 30px purple;
+    box-shadow: 0px 0px 30px greenyellow;
     border-bottom-style: solid;
-    border-bottom-color: greenyellow;
+    border-bottom-color: rgb(8, 183, 241);
     border-bottom-width: 5px;
 }
 
@@ -28,7 +28,7 @@ header{
     width: 100%;
     height: auto; overflow: hidden;
     float: left;
-    color: greenyellow;
+    color:rgb(7, 185, 245);
     font-size: 23px;
 }
 #menu{
@@ -50,7 +50,7 @@ header{
     margin-top: -30px;
 }
 #checkbox{
-    color: greenyellow;
+    color: rgb(7, 185, 245);
     background-color: black;
     border-bottom-style: solid;
     border-bottom-color: blanchedalmond;
@@ -63,7 +63,7 @@ header{
     width: 50%;
     margin-left: 100px;
     float: left;
-    background-color: darkblue;
+    background-color: white;
     border-color: black;
     border: 3px solid;
 }
