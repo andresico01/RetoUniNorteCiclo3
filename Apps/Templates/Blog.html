@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
   </head>
   <body>
+    <form action="Blog.html" method="POST"></form>
       <header class="header">
         <p class="header__logo"><img class="ms_logo" src="{{ url_for('static', filename='Image/logo_blog++.JPG' ) }}" alt="Logo"></p>
             <nav class="header__navigation">
-                <a href="/#" class="header__navigation--item">Login</a>
                 <a href="Blog.html" class="header__navigation--item">Mi Blog</a>
                 <input type="text" class="header__navigation--text" placeholder="Buscar Blog">
-                <a href="Contr.html" class="header__navigation--item">Productos</a>
+                <!--<a href="Contr.html" class="header__navigation--item">Productos</a>-->
+                <a href="/" class="header__navigation--item">Cerrar Sesion</a>
             </nav>
         </header>
         <section class="container2">

@@ -31,13 +31,13 @@ sesion = False
 usuario = None
 
 # Listado de usuarios inicial (Variable Global)
-usuarios = [Usuario("mzamoraa@uninorte.edu.co", "mzamora", "12345")]
+usuarios = [Usuario("mzamoraa@uninorte.edu.co", "mzamora", "12345"), Usuario("serdnaoiram@hotmail.com", "serdna", "12")]
 
 @app.route('/')
 def home():
     return render_template("login.html", mensaje="")
 
-@app.route('/',methods=["GET", "POST"])
+@app.route('/Blog',methods=["GET", "POST"])
 def login():
     # Declaracion para uso de variables globales
     global sesion
@@ -65,7 +65,7 @@ def login():
         # Validacion del usuario
         if found:
              sesion = True
-             return render_template("Blog.html", usuario=usuario)
+             return render_template("Blog.html")
         else:
              mensaje = Mensaje("Validación", "Correo Electronico y/o Contraseña estan errados.", True)
              print(mensaje.titulo)
@@ -74,7 +74,8 @@ def login():
 
 @app.route('/formulario.html')
 def regist():
-    return render_template("formulario.html")    
+    mensaje = Mensaje("", "", False)
+    return render_template("formulario.html", mensaje = mensaje)    
 
 @app.route('/formulario.html', methods=["GET", "POST"])
 def registro():
@@ -83,17 +84,18 @@ def registro():
     contraseña = request.form['contraseña']
     contraseña2 = request.form['contraseña2']
     found = False
+    mensaje = Mensaje("", "", False)
     if contraseña != contraseña2:
-        mensaje = Mensaje( "Validación", "las contraseñas no coinciden.", True)
+        mensaje = Mensaje( "Validación", "Las contraseñas no coinciden.", True)
         print(mensaje.titulo)
-        return render_template("prueba.html", mensaje=mensaje)
+        return render_template("formulario.html", mensaje=mensaje)
     elif found == False:
         for usr in usuarios:
             if usr.email == email:
                 #usuario = usr
                 found = True
-                mensaje = Mensaje("Validación", "Existe un usuario registradoco este correo electronico.", True)
-                return render_template("prueba.html",mensaje=mensaje)
+                mensaje = Mensaje("Validación", "Existe un usuario registrado con este correo electronico.", True)
+                return render_template("formulario.html", mensaje=mensaje)
                 break
     if found == False:
         usuarios.extend([Usuario(email, usuario, contraseña)])
@@ -113,16 +115,54 @@ def registro():
         #enviar el mensaje a travez del servidor de correo de gmail
         server.sendmail(msg['From'], msg['To'], msg.as_string())
         server.quit()#cerrar la conexión con el servidor
-        mensaje = "Enviado con éxito"
-        return render_template('login.html',mensaje=mensaje)
+        mensaje = Mensaje("Validacion","Usuario registrado con exito", True)
+        return render_template('/formulario.html', mensaje=mensaje)
    
-    return render_template("formulario.html")
+    return render_template("/login.html")
     
-
 
 @app.route('/Contr.html')
 def contr():
-    return render_template("Contr.html")
+    mensaje = Mensaje("", "", False)
+    return render_template("/Contr.html", mensaje=mensaje)
+
+
+@app.route('/Contr.html', methods=["GET", "POST"])
+def contras():
+    email = request.form['correo']
+    found = False
+    if found == False:
+       for usr in usuarios:
+            if usr.email == email:
+                contraseña = usr.password
+                found = True
+                print(contraseña)
+                
+                message_e = "Gracias por utilizar nuestro servicio de Blogs, la contraseña asignada a su cuenta es:\n\nContraseña: "+contraseña+"\n\n Esperamos que nuestros servicios sean de tu agrado."+"\n\n Ahora podras disfrutar nuevamente de nuestros servicios."+"\n\n Gracias por elegirnos."
+                #parametros de conexión del correo electronico
+                password = "grupo2ooma"
+                msg['From'] = "grupo.2.0.uninorte2020@gmail.com"
+                msg['To'] = email
+                msg['Subject'] = "Recuperación de contraseña"
+                # Cuerpo del mensaje se escoje texto plano
+                msg.attach(MIMEText(message_e, 'plain'))
+                #establecer conexión con el servidor en este caso gmail
+                server = smtplib.SMTP('smtp.gmail.com: 587')
+                server.starttls()
+                #autenticación de las credenciales de correo con el servidor de gmail
+                server.login(msg['From'], password)
+                #enviar el mensaje a travez del servidor de correo de gmail
+                server.sendmail(msg['From'], msg['To'], msg.as_string())
+                server.quit()#cerrar la conexión con el servidor
+                
+                mensaje = Mensaje("Validación", "Revise su correo electronico e intente ingresar nuevamente.", True)
+                return render_template("/Contr.html", mensaje=mensaje)
+                break
+    return render_template("/Contr.html", mensaje=mensaje)
+
+@app.route('/Blog.html')
+def princip():
+    return render_template("/Blog.html")
 
 
 if __name__ == '__main__':

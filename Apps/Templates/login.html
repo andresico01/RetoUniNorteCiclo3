@@ -10,15 +10,15 @@
         <header class="header">
             <p class="header__logo"><img class="ms_logo" src="{{ url_for('static', filename='Image/logo_blog++.JPG' ) }}"></p>
             <nav class="header__navigation">
-                <a href="#" class="header__navigation--item">Login</a>
-                <a href="Apps/Templates/Blog.html" class="header__navigation--item">Mi Blog</a>
-                <input type="text" class="header__navigation--text" placeholder="Buscar Blog">
-                <a href="Apps/Templates/Contr.html" class="header__navigation--item">Productos</a>
+                <!--<a href="/" class="header__navigation--item">Login</a>-->
+                <!--<a href="Apps/Templates/Blog.html" class="header__navigation--item">Mi Blog</a>-->
+                <!--<input type="text" class="header__navigation--text" placeholder="Buscar Blog">-->
+                <!--<a href="Apps/Templates/Contr.html" class="header__navigation--item">Productos</a>-->
             </nav>
         </header>
     
         <section class="container">
-            <form action="" method="POST" class="content">
+            <form action="Blog" method="POST" class="content">
                 {% if mensaje.esError  %}
                 <style> div{text-align: center; color: aqua; }
                         button{background-color: gray; border-color: greenyellow; color: beige; font-size: 21px; size: 20px;}
@@ -42,8 +42,8 @@
                     </div>
                 </div>
                 <div class="register__info">
-                    <a href="Contr.html">¿No puede acceder a su cuenta?</a>
-                    <a href="formulario.html">Registrese</a>
+                    <a href="Contr.html"> ¿No puedes acceder a tu cuenta?<br>aqui puedes recuperar tu contraseña ;)</a>
+                    <a href="formulario.html">Registraste aqui</a>
                 </div>
                 <div class="input__content">
                     <input class="login__button" type="submit" value="Iniciar Sesión">
