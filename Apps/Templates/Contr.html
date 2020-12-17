@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Forma</title>
+        <!--<link rel="stylesheet" type="text/css" media="screen" href="../static/style/style.css">-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+    </head>
+    <body>
+        <header class="header">
+            <p class="header__logo"><img class="ms_logo" src="../Image/logo_blog++.JPG" alt="Logo"></p>
+            <nav class="header__navigation">
+                <a href="/#" class="header__navigation--item">Login</a>
+                <a href="Blog.html" class="header__navigation--item">Mi Blog</a>
+                <input type="text" class="header__navigation--text" placeholder="Buscar Blog">
+                <a href="Contr.html" class="header__navigation--item">Productos</a>
+            </nav>
+        </header>
+         
+        <section class="container">
+            <form action="" class="content">
+                <div class="content__data">
+                    <img class="ms_logo" src="../Image/logo_blog++.JPG" alt="Logo">
+                    
+                    <div class="log__item">
+                        <!-- <span class="content__data--title">Email</span> -->
+                        <input type="password" class="content__data--input" placeholder="Nueva Contraseña" required>
+                        <!-- <span class="content__data--title">Contraseña</span> -->
+                        <input type="password" class="content__data--input" placeholder="Nueva Contraseña" required>
+                    </div>
+                </div>
+                
+                <div class="input__content">
+                    <input class="login__button" type="button" value="Iniciar Sesión">
+                </div>
+            </form>
+        </section>
+            
+        
+        <footer class="footer">
+            <span class="footer__text">Esta es mi pagina &copy;</span>
+         </footer>
+    
+    
+    </body>
+</html>

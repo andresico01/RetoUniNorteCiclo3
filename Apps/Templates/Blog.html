@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Forma</title>
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../static/style/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+  </head>
+  <body>
+      <header class="header">
+        <p class="header__logo"><img class="ms_logo" src="{{ url_for('static', filename='Image/logo_blog++.JPG' ) }}" alt="Logo"></p>
+            <nav class="header__navigation">
+                <a href="/#" class="header__navigation--item">Login</a>
+                <a href="Blog.html" class="header__navigation--item">Mi Blog</a>
+                <input type="text" class="header__navigation--text" placeholder="Buscar Blog">
+                <a href="Contr.html" class="header__navigation--item">Productos</a>
+            </nav>
+        </header>
+        <section class="container2">
+          <form action="/text.txt" class="content2">
+            <div class="opcion">
+              <div class="Iteam_1">
+                <input type="checkbox" name="Blog Publico" id="Blog Publico">
+                <span class="content__data--title">Blog Publico</span>
+              </div>
+              <div class="Iteam_2">
+                <input type="checkbox" name="Blog Privado" id="Blog Privado">
+                <span class="content__data--title">Blog Privado</span>
+            </div>
+            <article class="Texto">
+              <h1 class="titulo">Titulo del blog</h1>
+              <textarea class="articulo" name="textoPost" id="TextoPost" cols="60" rows="30" style="align-items: center;">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                exercitationem delectus odio esse quos. Repellat libero odio 
+                pariatur explicabo neque architecto accusantium, 
+                perspiciatis itaque expedita, ipsum est vel voluptatem nam!</textarea>
+            </article>
+            </div>
+                  <div class="input__content">
+                    <input class="button" type="button" value="Guardar Cambios">
+                </div>
+              </div>
+          </form>
+      </section>
+      <footer class="footer">
+        <span class="footer__text">Esta es mi pagina &copy;</span>
+     </footer>
+    
+  </body>
+</html>
