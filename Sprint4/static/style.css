@@ -264,3 +264,18 @@ textarea{
 .Box__2:hover{
     border: 2px solid rgb(216, 200, 200);
 }
+
+/* ESTILOS PARA LOS MENSAJES DE ALERTA DE INGRESO AL SISTEMA 
+   (NO FUNCIONAN LLAMANDOLOS DESDE AQUI, POR ESO ESTAN EN LOS html)
+ .div_msg_Alert{
+    text-align: center;
+     color: aqua;
+}
+
+.Buton_msg_Alert{
+    background-color: gray; 
+    border-color: greenyellow; 
+    color: beige; 
+    font-size: 21px; 
+    size: 20px;
+} */
