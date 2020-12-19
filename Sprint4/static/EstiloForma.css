@@ -1,0 +1,131 @@
+body, html, h1, h2,footer,nav{
+    margin: 0;
+    padding: 0;
+    
+ }
+header{
+    display: block;
+}
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    header {
+      width: 80%;
+      padding: 0;
+    }
+    nav {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    header, nav, footer {
+      width: 100%;
+    }
+  }
+/*estructuras*/
+body{
+    
+    height: 300px;
+     width: 1200px;
+    margin: 0 auto;
+    background:#666A75;
+ }
+ 
+header{
+    
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+ }
+ nav{
+     padding:10px;
+     overflow: hidden;
+     background-color:#333;
+ }
+
+ form{
+     
+    height: 250%;
+    /* width: 50%;*/
+     background-color: white;
+ }
+ footer{
+    height:30px;
+    background:#F9F8F9;
+ }
+ h1{
+     color:black;
+}
+h2{
+    text-align: center;
+
+}
+ input[type="submit"]{
+     position:relative;
+     left:170px;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+ }
+ table{
+    position:relative;
+    left: 31%;
+    top: 30%;
+    background-origin: padding-box;
+
+ }
+ .reg a{
+    display: flex;
+    clear:inherit;
+     position:relative;
+     left:47%;
+     margin-top: 20%;
+     padding: 0%;
+     
+     
+     color:blue;
+     
+ }
+ .recu a{
+    display:flex;
+     clear: both;
+     position:relative;
+     left:525px;
+     padding: 0%;
+     color:blue;
+ }
+ a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ a:hover{
+    background-color:darkgray;
+    color: black;
+ }
+ tr:nth-child(even) {
+     background-color: #f2f2f2;
+    }
+ p{
+     text-align:center;
+ }
+ li{
+     text-align: center;
+     color:#333;
+ }
+ 
+ :required{
+     background:rgb(250, 199, 199);
+ }
+ textarea{
+     display: inline;
+    height: 500px; 
+    width:1000px;
+ }
