@@ -29,7 +29,7 @@ def acceso():
 
 @app.route('/login',methods=['GET','POST'])
 def login():
-    contador = 0
+    #contador = 0
     
     if(request.method == 'POST'):
         correo = request.form['correo']
@@ -37,22 +37,16 @@ def login():
         conexion = sqlite3.connect("dbUsuarios.db")
         conexion.row_factory = sql.Row
         objcursor = conexion.cursor()
-        objcursor.execute("select * from T_Usuarios where Correo = '"+correo+"' and Pass = '"+passw+"'")
-        rows = objcursor.fetchall()
-    
-        for i in rows:
-            contador = contador + 1
-                
-        if(contador > 0):
-            print(contador)
+        objcursor.execute("select Hash from T_Usuarios where Correo = '"+correo+"'")
+        rows = objcursor.fetchone()
+            
+        if passw and check_password_hash(rows["Hash"], passw):
             session['login'] = True
             session['user'] = correo
-            #return redirect(url_for('principal',user=correo))
             return render_template('RealBlog.html', user=correo)
         else:
             mensaje = Mensaje("!ERROR¡", "Correo Electronico y/o Contraseña estan errados.", True)
         return render_template('login.html', mensaje = mensaje)
-    
 
 app.secret_key = '1234'
 
@@ -79,8 +73,9 @@ def regist():
     mensaje = Mensaje("", "", False)
     return render_template("formulario.html", mensaje = mensaje)
 
-@app.route('/formulario', methods=["GET", "POST"])
+@app.route('/formulario', methods=["POST"])
 def registro():
+    email= None
     email = request.form['correo']
     usuario = request.form['usuario']
     contraseña = request.form['contraseña']

@@ -228,10 +228,11 @@ textarea{
     top:5%;
     display: flex;
     padding: 15px;
+    padding-left: 50px;
     flex-direction: column;
     justify-content: space-around;
     min-height: 80%;
-    width: 40%;
+    width: 70%;
 }
 .Box img{
     width: 100%;
@@ -265,6 +266,22 @@ textarea{
     border: 2px solid rgb(216, 200, 200);
 }
 
+.boton4 {
+    color: rgba(237, 238, 248, 0.9) !important;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+    padding: 0.5em 1.2em;
+    background: #4f6360;
+    border: 2px solid;
+    border-color: #318aac;
+    position: relative;
+  }
+  .boton4:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
 /* ESTILOS PARA LOS MENSAJES DE ALERTA DE INGRESO AL SISTEMA 
    (NO FUNCIONAN LLAMANDOLOS DESDE AQUI, POR ESO ESTAN EN LOS html)
  .div_msg_Alert{
