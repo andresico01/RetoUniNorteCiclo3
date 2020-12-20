@@ -12,7 +12,10 @@
       <header class="header">
         <p class="header__logo"><img class="ms_logo" src="{{ url_for('static', filename='Image/logo_blog++.JPG' ) }}" alt="Logo"></p>
             <nav class="header__navigation">
-                <a href="{{url_for('home')}}" class="header__navigation--item">Login</a>
+                <a href="{{url_for('Blog')}}" class="header__navigation--item">Mi Blog</a>
+                <input type="text" class="header__navigation--text" placeholder="Buscar Blog">
+                <!--<a href="Contr.html" class="header__navigation--item">Productos</a>-->
+                <a href="{{url_for('logout')}}" class="header__navigation--item">Cerrar Sesion</a>
             </nav>
         </header>
        {% block content %}

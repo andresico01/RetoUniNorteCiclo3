@@ -47,6 +47,8 @@ def login():
         else:
             mensaje = Mensaje("!ERROR¡", "Correo Electronico y/o Contraseña estan errados.", True)
         return render_template('login.html', mensaje = mensaje)
+    
+
 
 app.secret_key = '1234'
 
@@ -67,6 +69,11 @@ def logout():
     else:
         mensaje = Mensaje("!ERROR¡","Debes Iniciar Sesión Primero",True)
         return render_template('login.html',mensaje=mensaje)
+@app.route('/Blog')
+def Blog():
+    return render_template('Blog.html')
+
+
 
 @app.route('/formulario')
 def regist():
