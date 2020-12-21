@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request,session,redirect,url_for
 from werkzeug.security import generate_password_hash,check_password_hash
 import sqlite3
+from Froms import AddForm,DelForm
 import sqlite3 as sql
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -41,6 +42,7 @@ def login():
         rows = objcursor.fetchone()
             
         if passw and check_password_hash(rows["Hash"], passw):
+           
             session['login'] = True
             session['user'] = correo
             return render_template('RealBlog.html', user=correo)
@@ -53,6 +55,7 @@ def login():
 app.secret_key = '1234'
 
 @app.route('/RealBlog')
+
 def principal():
     if 'user' in session:
         return render_template('/RealBlog.html')
@@ -63,6 +66,7 @@ def principal():
 @app.route('/logout')
 def logout():
     if 'user' in session:
+        print("<<<>>>")
         session.clear()
         session.pop('user', None)
         return redirect(url_for('acceso'))
@@ -72,7 +76,12 @@ def logout():
 @app.route('/Blog')
 def Blog():
     return render_template('Blog.html')
-
+################################
+########Ejemplo_visualizar######
+################################
+@app.route('/appar')
+def entrar():
+    return render_template('NuevoBlog.html')
 
 
 @app.route('/formulario')
