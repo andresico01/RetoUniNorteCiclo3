@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Forma</title>
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../static/style/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+  </head>
+  <body>
+    <!-- <form action="Blog.html" method="POST"></form> -->
+      <header class="header">
+        <p class="header__logo"><img class="ms_logo" src="{{ url_for('static', filename='Image/logo_blog++.JPG' ) }}" alt="Logo"></p>
+            <nav class="header__navigation">
+                <a href="{{url_for('home')}}" class="header__navigation--item">Login</a>
+            </nav>
+        </header>
+       {% block content %}
+
+       {% endblock %}
+      <footer class="footer">
+        <span class="footer__text">Esta es mi pagina &copy;</span>
+     </footer>
+    
+  </body>
+</html>

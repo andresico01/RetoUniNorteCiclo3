@@ -1,0 +1,45 @@
+{% extends "platilla.html" %}
+{% block content%}
+
+
+<section class="container2">
+    <form action="/eliminarBlog" method="POST"  target="_blank">
+      <div class="opcion">
+        
+        {% if publico == 'SI' %}
+        <div>
+          <input type="radio" name="publico" value="SI" checked>
+        <span class="content__data--title">Blog Publico</span>
+         </div>
+        <div>
+          <input type="radio" name="publico" value="NO" >
+        <span class="content__data--title">Blog Privado</span> 
+        </div>
+        {% else %}
+        <div>
+          <input type="radio" name="publico" value="SI" >
+        <span class="content__data--title">Blog Publico</span>
+         </div>
+        <div>
+          <input type="radio" name="publico" value="NO" checked>
+        <span class="content__data--title">Blog Privado</span> 
+        </div>
+        {% endif %}
+
+      </div>
+      <div>
+      <article class="Texto">
+        <h1><textarea Class="articulo" name="idBlog" id="Titulo" cols="30" rows="1"style="align-items: center;">{{idBlog}}</textarea></h1>
+        <h1><textarea Class="articulo" name="titulo" id="Titulo" cols="30" rows="1"style="align-items: center;">{{titulo}}</textarea></h1>
+        <h1><textarea class="articulo" name="textoPost" id="TextoPost" cols="30" rows="15" style="align-items: center;">{{textoPost}}</textarea></h1>
+      </article>
+      </div>
+            <div class="input__content">
+              <input class="boton4" type="submit" value="ESTA SEGURO DE ELIMINAR EL BLOG">
+          </div>
+        </div>
+    </form>
+  </section>
+
+
+{% endblock %}

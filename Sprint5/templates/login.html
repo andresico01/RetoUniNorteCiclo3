@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Forma</title>
+        <!--<link rel="stylesheet" type="text/css" media="screen" href="Apps/static/style/style.css">-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+    </head>
+    <body>
+        <header class="header">
+            <p class="header__logo"><img class="ms_logo" src="{{ url_for('static', filename='Image/logo_blog++.JPG' ) }}"></p>
+            <nav class="header__navigation">
+                <!--<a href="/" class="header__navigation--item">Login</a>-->
+                <!--<a href="Apps/Templates/Blog.html" class="header__navigation--item">Mi Blog</a>-->
+                <!--<input type="text" class="header__navigation--text" placeholder="Buscar Blog">-->
+                <!--<a href="Apps/Templates/Contr.html" class="header__navigation--item">Productos</a>-->
+            </nav>
+        </header>
+    
+        <section class="container">
+            <form action="login" method="POST" class="content">
+                {% if mensaje.esError  %}
+                <style> div{text-align: center; color: aqua; }
+                        button{background-color: gray; border-color: greenyellow; color: beige; font-size: 21px; size: 20px;}
+                </style>
+                <div id="alert" role="alert">
+                    <h4 >{{ mensaje.titulo  }}</h4>
+                    <p> {{ mensaje.texto }}</p>
+                    <hr>
+                    <button type="button" data-bs-dismiss="alert" aria-label="Close" onclick="document.getElementById('alert').style.display = 'none';">&times;</button>
+                </div>
+                {% endif %}
+                <div class="content__data">
+                    <img class="ms_logo" src="{{ url_for('static', filename='Image/logo_blog++.JPG' ) }}" alt="Logo">
+                    <span class="title"><strong>Iniciar Sesión</strong></span>
+                    <p class="subtitle">--------</p>
+                    <div class="log__item">
+                        <!-- <span class="content__data--title">Email</span> -->
+                        <input type="email" name="correo" class="content__data--input" placeholder="Nombre de Usuario" required>
+                        <!-- <span class="content__data--title">Contraseña</span> -->
+                        <input type="password" name="contraseña" class="content__data--input" placeholder="Contraseña" required>
+                    </div>
+                </div>
+                <div class="register__info">
+                    <a href="Contr"> ¿No puedes acceder a tu cuenta?<br>aqui puedes recuperar tu contraseña ;)</a>
+                    <a href="formulario">Registrate aqui</a>
+                </div>
+                <div class="input__content">
+                    <input class="login__button" type="submit" value="Iniciar Sesión">
+                </div>
+            </form>
+        </section>
+            
+        
+        <footer class="footer">
+            <span class="footer__text">Esta es mi pagina &copy;</span>
+         </footer>
+    
+    </body>
+</html>

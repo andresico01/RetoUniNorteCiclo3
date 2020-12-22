@@ -1,0 +1,27 @@
+{% extends "platilla.html" %}
+{% block content%}
+<section class="container2">
+  <form action="/appar" >
+    <div class="opcion"> 
+      <input type="button" onclick="location.href='/NuevoBlog'" value="Nuevo Blog" class="boton4">
+      </div>
+      <hr>
+       </form>
+
+       {% for BlogBD in BlogsBD %}
+  <form class="content2" action="modificar" method="POST">
+    <div class="Box">
+      <input type="number" name="idBlog" id="idBlog" style="height: 10px; width: 30px; background-color: black;" value={{BlogBD.idBlog}}>{{BlogBD.idBlog}}
+<!--       <input type="text" name="titulo" id="titulo" style="height: 10px; width: 30px; background-color: chartreuse;" value={{BlogBD.titulo}}>{{BlogBD.titulo}}
+      <input type="text" name="textoPost" id="textoPost" style="height: 10px; width: 30px; background-color: chartreuse;" value={{BlogBD.textoPost}}>{{BlogBD.textoPost}}
+ -->      <h2 class="title" name=titulo>{{BlogBD.titulo}}</h2>
+      <p class="subtitle" name="textoPost" >{{BlogBD.textoPost}}</p>
+          <div>
+            <input type="submit"  value="Modificar Blog" class="boton4">
+            <input type="button" onclick="location.href='/elm'" value="Eliminar Blog" class="boton4">  
+          </div>         
+    </div>
+  </form>
+  {% endfor %}
+</section>
+{% endblock %}
